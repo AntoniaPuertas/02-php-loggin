@@ -15,3 +15,35 @@ function require_login() {
         exit();
     }
 }
+
+
+/**
+ * Como debuggear
+ * Instalar la extensión php debug
+ * Instalar XDebug:
+ * En las instrucciones de la extensión seguir el enlace 'xdebug installation wizard'
+ * Visitar php.info copiar (control + a) y pegar todo el código de la página en la ventana de la web del enlace
+ * Seguimos las instrucciones para bajar un archivo .dll, dónde colocarlo
+ */
+
+ /**
+  * En php.ini añadir:
+  * [XDebug]
+*  zend_extension = xdebug
+*  
+*  xdebug.mode = debug
+*  xdebug.start_with_request = yes
+*  xdebug.client_port = 9003
+*  xdebug.client_host = "127.0.0.1"
+*  
+*  ; Opcional: habilitar el log de Xdebug para solucionar problemas
+*  xdebug.log = "C:\xampp\php\logs\xdebug.log"
+*  
+*  ; Opcional: configurar el IDE key para identificar las sesiones de depuración
+*  xdebug.idekey = VSCODE
+  */
+
+ /**
+  * En VSC abrir del menú de la derecha el debug y crear un archivo launch.json
+  * 
+  */
